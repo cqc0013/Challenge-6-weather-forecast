@@ -28,3 +28,22 @@
 .search-button {
     padding: 10px 15px;
 }
+
+.search-history-container {
+    padding: 10px;
+}
+
+.past-search {
+    background-color: white;
+    border-width: thin;
+    border-color: lightgrey;
+    border-style: solid;
+    border-radius: 3px;
+    margin: 0;
+    text-align: left;
+    width: 350px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 20px;
+    color: grey;
+}
