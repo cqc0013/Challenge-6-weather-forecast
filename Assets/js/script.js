@@ -37,3 +37,22 @@ var searchHistoryList = function(cityName) {
     $("#search-input").val("");
 
 };
+
+// load saved search history entries into search history container
+var loadSearchHistory = function() {
+    // get saved search history
+    var savedSearchHistory = localStorage.getItem("savedSearches");
+
+    // return false if there is no previous saved searches
+    if (!savedSearchHistory) {
+        return false;
+    }
+
+    // turn saved search history string into array
+    savedSearchHistory = JSON.parse(savedSearchHistory);
+
+    // go through savedSearchHistory array and make entry for each item in the list
+    for (var i = 0; i < savedSearchHistory.length; i++) {
+        searchHistoryList(savedSearchHistory[i]);
+    }
+};
